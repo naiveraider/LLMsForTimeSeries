@@ -1,3 +1,35 @@
+
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="center">
+        <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=en">English</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=zh-CN">简体中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=zh-TW">繁體中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=ja">日本語</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=ko">한국어</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=hi">हिन्दी</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=th">ไทย</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=fr">Français</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=de">Deutsch</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=es">Español</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=it">Italiano</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=ru">Русский</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=pt">Português</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=nl">Nederlands</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=pl">Polski</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=ar">العربية</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=fa">فارسی</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=tr">Türkçe</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=vi">Tiếng Việt</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=id">Bahasa Indonesia</a>
+        | <a href="https://openaitx.github.io/view.html?user=BennyTMT&project=LLMsForTimeSeries&lang=as">অসমীয়া</
+      </div>
+    </div>
+  </details>
+</div>
+
 # Are Language Models Actually Useful for Time Series Forecasting? 
 
 **(NeurIPS 2024 Spotlight)** 🌟 [Paper Link](https://arxiv.org/pdf/2406.16964) 
