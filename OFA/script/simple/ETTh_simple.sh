@@ -23,7 +23,7 @@ else
   lr=0.00005
 fi
 python $tag_file \
-    --root_path ./datasets/ETT-small/ \
+    --root_path ../datasets/ETT-small/ \
     --data_path ETTh1.csv \
     --model_id 'ETTh1_'$inp_len_h'_'$pred_len'_simple_'$method \
     --data ett_h \
@@ -68,7 +68,7 @@ else
   lr=0.00005
 fi
 python $tag_file \
-    --root_path ./datasets/ETT-small/ \
+    --root_path ../datasets/ETT-small/ \
     --data_path ETTh2.csv \
     --model_id 'ETTh2_'$inp_len_h'_'$pred_len'_simple_'$method \
     --data ett_h \

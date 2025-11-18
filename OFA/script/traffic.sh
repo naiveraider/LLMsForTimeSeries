@@ -21,7 +21,7 @@ else
     lr=0.0005
 fi
 python main.py \
-    --root_path ./datasets/traffic/ \
+    --root_path ../datasets/traffic/ \
     --data_path traffic.csv \
     --model_id 'traffic_'$seq_len'_'$pred_len'_'$method'_ofa' \
     --data custom \

@@ -21,7 +21,7 @@ else
 fi
 echo $pred_len"_"$bs"_"$lr
 python run.py \
-    --root_path ./datasets/traffic/ \
+    --root_path ../datasets/traffic/ \
     --data_path traffic.csv \
     --is_training 1 \
     --task_name long_term_forecast \
@@ -73,7 +73,7 @@ done
 # do
 # echo $pred_len"_"$bs"_"$lr
 # python run.py \
-#     --root_path ./datasets/traffic/ \
+#     --root_path ../datasets/traffic/ \
 #     --data_path traffic.csv \
 #     --is_training 1 \
 #     --task_name long_term_forecast \

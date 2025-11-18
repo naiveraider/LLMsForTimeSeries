@@ -13,7 +13,7 @@ comment='TimeLLM-ETTh1_ETTh2'
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_pretrain.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/ETT-small/ \
+  --root_path ../datasets/ETT-small/ \
   --data_path_pretrain ETTh1.csv \
   --data_path ETTh2.csv \
   --model_id ETTh1_ETTh2_512_96 \
@@ -41,7 +41,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_pretrain.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/ETT-small/ \
+  --root_path ../datasets/ETT-small/ \
   --data_path_pretrain ETTh1.csv \
   --data_path ETTh2.csv \
   --model_id ETTh1_ETTh2_512_192 \
@@ -69,7 +69,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_pretrain.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/ETT-small/ \
+  --root_path ../datasets/ETT-small/ \
   --data_path_pretrain ETTh1.csv \
   --data_path ETTh2.csv \
   --model_id ETTh1_ETTh2_512_336 \
@@ -98,7 +98,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_pretrain.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/ETT-small/ \
+  --root_path ../datasets/ETT-small/ \
   --data_path_pretrain ETTh1.csv \
   --data_path ETTh2.csv \
   --model_id ETTh1_ETTh2_512_720 \

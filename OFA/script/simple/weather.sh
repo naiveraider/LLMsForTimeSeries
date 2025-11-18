@@ -23,7 +23,7 @@ else
   bs=256
 fi
 python $tag_file \
-    --root_path ./datasets/weather/ \
+    --root_path ../datasets/weather/ \
     --data_path weather.csv \
     --model_id 'weather_'$seq_len'_'$pred_len'_'$method \
     --data custom \

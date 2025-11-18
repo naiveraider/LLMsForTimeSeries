@@ -20,7 +20,7 @@ else
 fi  
 echo $eval_target"_"$pred_len"_"$bs"_"$lr
 python run.py \
-    --root_path ./datasets/electricity/ \
+    --root_path ../datasets/electricity/ \
     --data_path electricity.csv \
     --is_training 1 \
     --task_name long_term_forecast \
@@ -76,7 +76,7 @@ for bs in $bss;
 do
 echo $eval_target"_"$pred_len"_"$bs"_"$lr
 python run.py \
-    --root_path ./datasets/electricity/ \
+    --root_path ../datasets/electricity/ \
     --data_path electricity.csv \
     --is_training 1 \
     --task_name long_term_forecast \

@@ -13,7 +13,7 @@ do
 for method in $methods_h;
 do
 python main.py \
-    --root_path ./datasets/weather/ \
+    --root_path ../datasets/weather/ \
     --data_path weather.csv \
     --model_id 'weather_'$seq_len'_'$pred_len'_'$method \
     --data custom \

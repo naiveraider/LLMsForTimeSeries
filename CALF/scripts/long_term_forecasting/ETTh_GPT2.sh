@@ -14,7 +14,7 @@ do
 for eval_target in $methods_h; 
 do 
 python run.py \
-    --root_path ./datasets/ETT-small/ \
+    --root_path ../datasets/ETT-small/ \
     --data_path ETTh1.csv \
     --is_training 1 \
     --task_name long_term_forecast \
@@ -55,7 +55,7 @@ do
 for eval_target in $methods_h; 
 do 
 python run.py \
-    --root_path ./datasets/ETT-small/ \
+    --root_path ../datasets/ETT-small/ \
     --data_path ETTh2.csv \
     --is_training 1 \
     --task_name long_term_forecast \

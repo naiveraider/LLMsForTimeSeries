@@ -23,7 +23,7 @@ else
   bs=32
 fi
 python $tag_file \
-    --root_path ./datasets/traffic/ \
+    --root_path ../datasets/traffic/ \
     --data_path traffic.csv \
     --model_id 'traffic_'$seq_len'_'$pred_len'_'$method \
     --data custom \

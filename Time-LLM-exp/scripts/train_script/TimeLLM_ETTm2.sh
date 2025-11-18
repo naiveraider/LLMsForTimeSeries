@@ -23,7 +23,7 @@ do
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_main.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/ETT-small/ \
+  --root_path ../datasets/ETT-small/ \
   --data_path ETTm2.csv \
   --model_id ETTm2_512_96_$method \
   --model $model_name \
@@ -49,7 +49,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_main.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/ETT-small/ \
+  --root_path ../datasets/ETT-small/ \
   --data_path ETTm2.csv \
   --model_id ETTm2_512_192_$method \
   --model $model_name \
@@ -77,7 +77,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_main.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/ETT-small/ \
+  --root_path ../datasets/ETT-small/ \
   --data_path ETTm2.csv \
   --model_id ETTm2_512_336_$method \
   --model $model_name \
@@ -105,7 +105,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_main.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/ETT-small/ \
+  --root_path ../datasets/ETT-small/ \
   --data_path ETTm2.csv \
   --model_id ETTm2_512_720_$method \
   --model $model_name \

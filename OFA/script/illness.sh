@@ -19,7 +19,7 @@ else
     lr=0.00005
 fi
 python main.py \
-    --root_path ./datasets/illness/ \
+    --root_path ../datasets/illness/ \
     --data_path national_illness.csv \
     --model_id 'ofa_Illness_'$seq_len'_'$pred_len'_'$method \
     --data custom \

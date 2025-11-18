@@ -20,7 +20,7 @@ else
     lr=0.00005
 fi
 python main.py \
-    --root_path ./datasets/weather/ \
+    --root_path ../datasets/weather/ \
     --data_path weather.csv \
     --model_id 'ofa_weather_'$seq_len'_'$pred_len'_'$method \
     --data custom \

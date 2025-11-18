@@ -22,7 +22,7 @@ do
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_main.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path  ./dataset/illness/  \
+  --root_path  ../datasets/illness/  \
   --data_path national_illness.csv \
   --model_id Illness_104_24_$method \
   --model $model_name \
@@ -47,7 +47,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_main.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/illness/ \
+  --root_path ../datasets/illness/ \
   --data_path national_illness.csv \
   --model_id Illness_104_36_$method \
   --model $model_name \
@@ -72,7 +72,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
   accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_main.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/illness/ \
+  --root_path ../datasets/illness/ \
   --data_path national_illness.csv \
   --model_id Illness_104_48_$method \
   --model $model_name \
@@ -97,7 +97,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
   accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_main.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/illness/ \
+  --root_path ../datasets/illness/ \
   --data_path national_illness.csv \
   --model_id Illness_104_60_$method \
   --model $model_name \

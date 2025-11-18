@@ -15,7 +15,7 @@ else
     lr=0.00005
 fi
 python eval_bs.py \
-    --root_path ./datasets/electricity/ \
+    --root_path ../datasets/electricity/ \
     --data_path electricity.csv \
     --model_id 'Electricity_'$seq_len'_'$pred_len'_'$method'_ofa' \
     --data custom \

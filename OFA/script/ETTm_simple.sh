@@ -27,7 +27,7 @@ else
   lr=0.00005
 fi
 python $tag_file \
-    --root_path ./datasets/ETT-small/ \
+    --root_path ../datasets/ETT-small/ \
     --data_path ETTm1.csv \
     --model_id 'ETTm1_'$inp_len_m'_'$pred_len'_simple_'$method \
     --data ett_m \
@@ -71,7 +71,7 @@ else
   lr=0.00005
 fi
 python $tag_file \
-    --root_path ./datasets/ETT-small/ \
+    --root_path ../datasets/ETT-small/ \
     --data_path ETTm2.csv \
     --model_id 'ETTm2_'$inp_len_m'_'$pred_len'_simple_'$method \
     --data ett_m \

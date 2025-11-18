@@ -18,7 +18,7 @@ do
 lr=0.0001
 bs=32
 python main.py \
-    --root_path ./datasets/electricity/ \
+    --root_path ../datasets/electricity/ \
     --data_path electricity.csv \
     --model_id 'Electricity_'$seq_len'_'$pred_len'_'$method \
     --data custom \

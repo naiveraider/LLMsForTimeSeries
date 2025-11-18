@@ -25,7 +25,7 @@ else
 fi
 echo $method"_"$lr
 python $run_file \
-    --root_path ./datasets/ETT-small/ \
+    --root_path ../datasets/ETT-small/ \
     --data_path ETTh1.csv \
     --model_id 'ETTh1_test_'$inp_len'_'$pred_len'_'$method'_ofa' \
     --data ett_h \
@@ -69,7 +69,7 @@ else
 fi
 echo $method"_"$lr
 python $run_file \
-    --root_path ./datasets/ETT-small/ \
+    --root_path ../datasets/ETT-small/ \
     --data_path ETTh2.csv \
     --model_id 'ETTh2_'$inp_len'_'$pred_len'_'$method'_ofa' \
     --data ett_h \

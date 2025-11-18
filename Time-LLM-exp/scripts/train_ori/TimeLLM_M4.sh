@@ -15,7 +15,7 @@ comment='TimeLLM-M4'
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_m4.py \
   --task_name short_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/m4 \
+  --root_path ../datasets/m4 \
   --seasonal_patterns 'Monthly' \
   --model_id m4_Monthly \
   --model $model_name \
@@ -40,7 +40,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_m4.py \
   --task_name short_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/m4 \
+  --root_path ../datasets/m4 \
   --seasonal_patterns 'Yearly' \
   --model_id m4_Yearly \
   --model $model_name \
@@ -65,7 +65,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_m4.py \
   --task_name short_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/m4 \
+  --root_path ../datasets/m4 \
   --seasonal_patterns 'Weekly' \
   --model_id m4_Weekly \
   --model $model_name \
@@ -90,7 +90,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_m4.py \
   --task_name short_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/m4 \
+  --root_path ../datasets/m4 \
   --seasonal_patterns 'Daily' \
   --model_id m4_Daily \
   --model $model_name \
@@ -115,7 +115,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_m4.py \
   --task_name short_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/m4 \
+  --root_path ../datasets/m4 \
   --seasonal_patterns 'Quarterly' \
   --model_id m4_Quarterly \
   --model $model_name \
@@ -141,7 +141,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_m4.py \
   --task_name short_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/m4 \
+  --root_path ../datasets/m4 \
   --seasonal_patterns 'Hourly' \
   --model_id m4_Hourly \
   --model $model_name \

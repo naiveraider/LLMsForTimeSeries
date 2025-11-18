@@ -14,7 +14,7 @@ comment='TimeLLM-ECL'
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_main.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/electricity/ \
+  --root_path ../datasets/electricity/ \
   --data_path electricity.csv \
   --model_id ECL_512_96 \
   --model $model_name \
@@ -38,7 +38,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
 accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_main.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/electricity/ \
+  --root_path ../datasets/electricity/ \
   --data_path electricity.csv \
   --model_id ECL_512_192 \
   --model $model_name \
@@ -62,7 +62,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
   accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_main.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/electricity/ \
+  --root_path ../datasets/electricity/ \
   --data_path electricity.csv \
   --model_id ECL_512_336 \
   --model $model_name \
@@ -86,7 +86,7 @@ accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_proces
   accelerate launch --multi_gpu --mixed_precision bf16 --num_processes $num_process --main_process_port $master_port run_main.py \
   --task_name long_term_forecast \
   --is_training 1 \
-  --root_path ./dataset/electricity/ \
+  --root_path ../datasets/electricity/ \
   --data_path electricity.csv \
   --model_id ECL_512_720 \
   --model $model_name \

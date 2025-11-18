@@ -18,7 +18,7 @@ do
 lr=0.0001
 bs=8
 python $tag_file\
-    --root_path ./datasets/illness/ \
+    --root_path ../datasets/illness/ \
     --data_path national_illness.csv \
     --model_id 'Illness_'$seq_len'_'$pred_len'_'$method \
     --data custom \
