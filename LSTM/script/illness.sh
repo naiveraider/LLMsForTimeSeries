@@ -33,6 +33,8 @@ python $tag_file\
     --hidden_size 128 \
     --num_layers 2 \
     --dropout 0.2 \
+    --enc_in 7 \
+    --c_out 7 \
     --freq 0 \
     --all 1 \
     --percent $percent \

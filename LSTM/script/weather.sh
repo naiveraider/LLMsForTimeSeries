@@ -28,8 +28,8 @@ python main.py \
     --hidden_size 128 \
     --num_layers 2 \
     --dropout 0.2 \
-    --enc_in 7 \
-    --c_out 7 \
+    --enc_in 21 \
+    --c_out 21 \
     --freq 0 \
     --lradj type3 \
     --percent $percent \

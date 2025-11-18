@@ -33,8 +33,8 @@ python main.py \
     --hidden_size 128 \
     --num_layers 2 \
     --dropout 0.2 \
-    --enc_in 7 \
-    --c_out 7 \
+    --enc_in 321 \
+    --c_out 321 \
     --freq 0 \
     --percent $percent \
     --itr 1 \
