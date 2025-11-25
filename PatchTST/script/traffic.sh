@@ -9,7 +9,7 @@ model=PatchTST
 methods_h='PatchTST'
 pre_lens_h="96 192 336 720"
 lr=0.0001
-bs=32
+bs=8
 for pred_len in $pre_lens_h;
 do
 for method in $methods_h;
