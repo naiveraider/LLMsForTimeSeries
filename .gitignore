@@ -5,6 +5,9 @@ ENV/
 datasets/
 .venv
 .env
+*.txt
+**/checkpoints/
+**/__pycache__/
 
 # IDE
 .idea/
