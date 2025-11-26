@@ -10,7 +10,7 @@ seq_len=336
 
 python -u run_longExp.py \
   --is_training 1 \
-  --root_path ./dataset/ \
+  --root_path ../datasets/weather/ \
   --data_path weather.csv \
   --model_id weather_$seq_len'_'96 \
   --model P_sLSTM \
@@ -28,7 +28,7 @@ python -u run_longExp.py \
 
 python -u run_longExp.py \
   --is_training 1 \
-  --root_path ./dataset/ \
+  --root_path ../datasets/weather/ \
   --data_path weather.csv \
   --model_id weather_$seq_len'_'192 \
   --model P_sLSTM \
@@ -45,7 +45,7 @@ python -u run_longExp.py \
 
 python -u run_longExp.py \
   --is_training 1 \
-  --root_path ./dataset/ \
+  --root_path ../datasets/weather/ \
   --data_path weather.csv \
   --model_id weather_$seq_len'_'336 \
   --model P_sLSTM \
@@ -62,7 +62,7 @@ python -u run_longExp.py \
 
 python -u run_longExp.py \
   --is_training 1 \
-  --root_path ./dataset/ \
+  --root_path ../datasets/weather/ \
   --data_path weather.csv \
   --model_id weather_$seq_len'_'720 \
   --model P_sLSTM \
