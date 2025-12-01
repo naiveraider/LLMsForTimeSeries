@@ -35,6 +35,7 @@ Improves linear forecasting by decomposing trend and residual components, offeri
      bash ./scripts/weather.sh (for Weather)
 ### NLinear
 Stabilizes linear forecasting through normalization, helping models perform better on datasets with large scale variations.
+
      cd ./NLinear
      bash ./scripts/ETTh.sh (for ETTh1 & ETTh2)
      bash ./scripts/ETTm.sh (for ETTm1 & ETTm2)
