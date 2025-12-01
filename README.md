@@ -16,7 +16,7 @@ Through a series of studies on three recent **transformer-based TSF** methods, w
 You can access the well pre-processed datasets from [Google Drive](https://drive.google.com/file/d/1NF7VEefXCmXuWNbnNe858WvQAkJ_7wuP/view), then place the downloaded contents under ./datasets
 
 ## Setup 🔧
-Three different popular LLM-based TSF methods were included in our ablation approach. You might want to follow the corresponding repos, [OneFitsAll](https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All), [Time-LLM](https://github.com/KimMeen/Time-LLM), and [CALF](https://github.com/Hank0626/CALF), to set up the environment respectivly. For the **''PAttn''** method, the environment from any of the above repos is compatible.
+Three different popular groups of methods were included in our ablation approach. one group is w/o transformer, another group is w/ transformer, the other group is LLM based.
 
 ##  w/o transformer
 ### Linear
@@ -84,8 +84,8 @@ A lightweight attention mechanism that reduces computational cost while retainin
 
 #### For other datasets, Please change the script name in above command.
 
-## Ablations
-#### Run Ablations on CALF (ETT) :
+## LLM
+#### Run on CALF (ETT) :
      
     cd ./CALF
     sh scripts/long_term_forecasting/ETTh_GPT2.sh
@@ -94,7 +94,7 @@ A lightweight attention mechanism that reduces computational cost while retainin
     sh scripts/long_term_forecasting/traffic.sh 
     (For other datasets, such as traffic)
 
-#### Run Ablations on OneFitsAll (ETT) :
+#### Run on OneFitsAll (ETT) :
      cd ./OFA
      bash ./script/ETTh_GPT2.sh   
      bash ./script/ETTm_GPT2.sh
@@ -102,7 +102,7 @@ A lightweight attention mechanism that reduces computational cost while retainin
      bash ./script/illness.sh 
      (For other datasets, such as illness)
 
-#### Run Ablations on  Time-LLM (ETT) 
+#### Run on Time-LLM (ETT) 
      cd ./Time-LLM-exp
      bash ./scripts/train_script/TimeLLM_ETTh1.sh
      bash ./scripts/train_script/TimeLLM_ETTm1.sh 
@@ -110,7 +110,7 @@ A lightweight attention mechanism that reduces computational cost while retainin
      bash ./scripts/train_script/TimeLLM_Weather.sh
      (For other datasets, such as Weather)
 
-#### (To run ablations on other datasets, please change the dataset name as shown in example.)
+#### (To run on other datasets, please change the dataset name as shown in example.)
 
 ## Acknowledgement
 
