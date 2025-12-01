@@ -1,21 +1,16 @@
-# Are Language Models Actually Useful for Time Series Forecasting? 
+# Are Transformers Effective for Time Series Forecasting?
 
-**(NeurIPS 2024 Spotlight)** 🌟 [Paper Link](https://arxiv.org/pdf/2406.16964) 
 
-In this work we showed that despite the recent popularity of LLMs in time series forecasting (TSF) they do not appear to meaningfully improve performance. A simple baseline, "PAttn," was proposed, which outperformed most LLM-based TSF models. 
+In this work we showed that despite the recent popularity of LSTM in time series forecasting (TSF) they do not appear to meaningfully improve performance. A simple baseline, "PAttn" was proposed, which outperformed most LLM-based TSF models, Linear models and LTSM base models. 
 
-Authors: [Mingtian Tan](https://x.com/MTTan1203),[Mike A. Merrill](https://mikemerrill.io/),[Vinayak Gupta](https://gvinayak.github.io/),[Tim Althoff](https://homes.cs.washington.edu/~althoff/),[Thomas Hartvigsen](https://www.tomhartvigsen.com/)
-
-### Autoregressive LLMs hold great potential for leveraging context to reason (forecast) future time series. Time Series Forecasting Models mentioned in this paper are Not.
-
-For reasoning (forecasting) time series through text. You may refer to this [time series reasoning (forecasting) work](https://github.com/behavioral-data/TSandLanguage/tree/main/text_aid_forecast).
+Authors: Kun Qian, Zhuo Qian, Yanke Li 
 
 ## Overview 💁🏼
-Recent work in time series analysis has increasingly focused on adapting pretrained large language models (LLMs) for **forecasting (TSF)**, classification, and anomaly detection. These studies suggest that language models, designed for sequential dependencies in text, could generalize to time series data. While this idea aligns with the popularity of language models in machine learning, direct connections between language modeling and TSF remain unclear. **How beneficial are language models for traditional TSF task?**
+Recent work in time series analysis has increasingly focused on adapting transformer for **forecasting (TSF)**, classification, and anomaly detection. These studies suggest that transformer models, designed for sequential dependencies in text, could generalize to time series data. While this idea aligns with the popularity of transformer models in machine learning, direct connections between transformer modeling and TSF remain unclear. **How beneficial are transformer models for traditional TSF task?**
 
-Through a series of ablation studies on three recent **LLM-based TSF** methods, we found that **removing the LLM component or replacing it with a simple attention layer did not worsen results—in many cases, it even led to improvements.** Additionally, we introduced PAttn, showing that patching and attention structures can perform as well as state-of-the-art LLM-based forecasters.
+Through a series of studies on three recent **transformer-based TSF** methods, we found that transformer model led to improvements. Additionally, we introduced PAttn, showing that patching and attention structures can perform well.
 
-![Ablations/PAttn](pic/ablations.png)
+![Ablations/PAttn](pic/transformer.png)
 
 ## Dataset 📖
 You can access the well pre-processed datasets from [Google Drive](https://drive.google.com/file/d/1NF7VEefXCmXuWNbnNe858WvQAkJ_7wuP/view), then place the downloaded contents under ./datasets
@@ -23,22 +18,73 @@ You can access the well pre-processed datasets from [Google Drive](https://drive
 ## Setup 🔧
 Three different popular LLM-based TSF methods were included in our ablation approach. You might want to follow the corresponding repos, [OneFitsAll](https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All), [Time-LLM](https://github.com/KimMeen/Time-LLM), and [CALF](https://github.com/Hank0626/CALF), to set up the environment respectivly. For the **''PAttn''** method, the environment from any of the above repos is compatible.
 
+##  w/o transformer
+### Linear
+A basic linear baseline that captures simple global trends but fails on nonlinear or long-range temporal dependencies.
 
-## PAttn 🤔
-The main difference between **PAttn** and [PatchTST](https://github.com/yuqinie98/PatchTST) is that we gradually removed parts of the Transformer module that may not be as essential, and Position Embedding. For more explanation, please refer to [this response](https://github.com/BennyTMT/LLMsForTimeSeries/issues/7).
-
-**Motivation**: When [DLinear](https://github.com/cure-lab/LTSF-Linear) has been surpassed by many new methods, we aim to provide a method based on Patching that is both simple and effective, serving as a simple baseline.
-
-     cd ./PAttn 
-
+     cd ./Linear
      bash ./scripts/ETTh.sh (for ETTh1 & ETTh2)
      bash ./scripts/ETTm.sh (for ETTm1 & ETTm2)
      bash ./scripts/weather.sh (for Weather)
-     
+### DLinear
+Improves linear forecasting by decomposing trend and residual components, offering greater robustness to non-stationarity.
+
+     cd ./DLinear
+     bash ./scripts/ETTh.sh (for ETTh1 & ETTh2)
+     bash ./scripts/ETTm.sh (for ETTm1 & ETTm2)
+     bash ./scripts/weather.sh (for Weather)
+### NLinear
+Stabilizes linear forecasting through normalization, helping models perform better on datasets with large scale variations.
+     cd ./NLinear
+     bash ./scripts/ETTh.sh (for ETTh1 & ETTh2)
+     bash ./scripts/ETTm.sh (for ETTm1 & ETTm2)
+     bash ./scripts/weather.sh (for Weather)
+### LSTM
+A recurrent model capable of learning nonlinear temporal patterns but limited by vanishing gradients and long-sequence inefficiency.
+
+     cd ./LSTM
+     bash ./scripts/ETTh.sh (for ETTh1 & ETTh2)
+     bash ./scripts/ETTm.sh (for ETTm1 & ETTm2)
+     bash ./scripts/weather.sh (for Weather)
+### p-sLSTM
+Enhances traditional LSTMs by selectively controlling state updates, enabling better long-term dependency modeling with higher efficiency.
+
+     cd ./P-sLSTM
+     bash ./scripts/EXP-LongForecasting/P_sLSTM/ETTh.sh (for ETTh1 & ETTh2)
+     bash ./scripts/EXP-LongForecasting/P_sLSTM/ETTm.sh (for ETTm1 & ETTm2)
+     bash ./scripts/EXP-LongForecasting/P_sLSTM/weather.sh (for Weather)
+
+#### For other datasets, Please change the script name in above command.
+
+## w/ transformer
+
+### iTransformer
+A variable-wise Transformer that improves long-sequence forecasting by modeling channels independently rather than time steps.
+
+     cd ./PAttn
+     bash ./scripts/ETTh.sh (for ETTh1 & ETTh2)
+     bash ./scripts/ETTm.sh (for ETTm1 & ETTm2)
+     bash ./scripts/weather.sh (for Weather)
+
+### PatchTST
+Uses patch embeddings to capture local temporal patterns, achieving state-of-the-art long-horizon forecasting performance.
+
+     cd ./PAttn
+     bash ./scripts/ETTh.sh (for ETTh1 & ETTh2)
+     bash ./scripts/ETTm.sh (for ETTm1 & ETTm2)
+     bash ./scripts/weather.sh (for Weather)
+
+### PAttn
+A lightweight attention mechanism that reduces computational cost while retaining essential temporal relationships for accurate forecasting.
+
+     cd ./PAttn
+     bash ./scripts/ETTh.sh (for ETTh1 & ETTh2)
+     bash ./scripts/ETTm.sh (for ETTm1 & ETTm2)
+     bash ./scripts/weather.sh (for Weather)
+
 #### For other datasets, Please change the script name in above command.
 
 ## Ablations
-     
 #### Run Ablations on CALF (ETT) :
      
     cd ./CALF
@@ -68,16 +114,6 @@ The main difference between **PAttn** and [PatchTST](https://github.com/yuqinie9
 
 ## Acknowledgement
 
-This codebase is built based on the [Time-Series-Library](https://github.com/thuml/Time-Series-Library). Thanks!
+This codebase is built based on the [LLMsForTimeSeries](https://github.com/BennyTMT/LLMsForTimeSeries). Thanks!
 
-
-## Citation
-If you find our work useful, please kindly cite our work as follows:
-```bibtex
-@inproceedings{tan2024language,
-    title={Are Language Models Actually Useful for Time Series Forecasting?},
-    author={Tan, Mingtian and Merrill, Mike A and Gupta, Vinayak and Althoff, Tim and Hartvigsen, Thomas},
-    booktitle={Neural Information Processing Systems (NeurIPS)},
-    year={2024}
-}
 
