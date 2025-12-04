@@ -1,4 +1,4 @@
-# Are Transformers Effective for Time Series Forecasting?
+# Are Transformers Useful for Time Series Forecasting?
 
 
 In this work we showed that despite the recent popularity of LSTM in time series forecasting (TSF) they do not appear to meaningfully improve performance. A simple baseline, "PAttn" was proposed, which outperformed most LLM-based TSF models, Linear models and LTSM base models. 
@@ -103,13 +103,6 @@ A lightweight attention mechanism that reduces computational cost while retainin
      bash ./script/illness.sh 
      (For other datasets, such as illness)
 
-#### Run on Time-LLM (ETT) 
-     cd ./Time-LLM-exp
-     bash ./scripts/train_script/TimeLLM_ETTh1.sh
-     bash ./scripts/train_script/TimeLLM_ETTm1.sh 
-
-     bash ./scripts/train_script/TimeLLM_Weather.sh
-     (For other datasets, such as Weather)
 
 #### (To run on other datasets, please change the dataset name as shown in example.)
 
